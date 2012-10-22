@@ -17,12 +17,13 @@
 		B88255B0162CA1C500A68D0B /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B88255AF162CA1C500A68D0B /* Default@2x.png */; };
 		B88255B2162CA1C500A68D0B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B88255B1162CA1C500A68D0B /* Default-568h@2x.png */; };
 		B88255B5162CA1C500A68D0B /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B88255B3162CA1C500A68D0B /* MainStoryboard.storyboard */; };
-		B88255B8162CA1C500A68D0B /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B88255B7162CA1C500A68D0B /* FirstViewController.m */; };
+		B88255B8162CA1C500A68D0B /* CurentLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B88255B7162CA1C500A68D0B /* CurentLocationViewController.m */; };
 		B88255BA162CA1C500A68D0B /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = B88255B9162CA1C500A68D0B /* first.png */; };
 		B88255BC162CA1C500A68D0B /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B88255BB162CA1C500A68D0B /* first@2x.png */; };
 		B88255BF162CA1C500A68D0B /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B88255BE162CA1C500A68D0B /* SecondViewController.m */; };
 		B88255C1162CA1C500A68D0B /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = B88255C0162CA1C500A68D0B /* second.png */; };
 		B88255C3162CA1C500A68D0B /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B88255C2162CA1C500A68D0B /* second@2x.png */; };
+		B8EBDD971635D2AF00DAA698 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8EBDD961635D2AF00DAA698 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,14 +41,15 @@
 		B88255AF162CA1C500A68D0B /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		B88255B1162CA1C500A68D0B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		B88255B4162CA1C500A68D0B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		B88255B6162CA1C500A68D0B /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		B88255B7162CA1C500A68D0B /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		B88255B6162CA1C500A68D0B /* CurentLocationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CurentLocationViewController.h; sourceTree = "<group>"; };
+		B88255B7162CA1C500A68D0B /* CurentLocationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CurentLocationViewController.m; sourceTree = "<group>"; };
 		B88255B9162CA1C500A68D0B /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
 		B88255BB162CA1C500A68D0B /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
 		B88255BD162CA1C500A68D0B /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		B88255BE162CA1C500A68D0B /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		B88255C0162CA1C500A68D0B /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
 		B88255C2162CA1C500A68D0B /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
+		B8EBDD961635D2AF00DAA698 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8EBDD971635D2AF00DAA698 /* CoreLocation.framework in Frameworks */,
 				B882559C162CA1C500A68D0B /* UIKit.framework in Frameworks */,
 				B882559E162CA1C500A68D0B /* Foundation.framework in Frameworks */,
 				B88255A0162CA1C500A68D0B /* CoreGraphics.framework in Frameworks */,
@@ -67,6 +70,7 @@
 		B882558C162CA1C400A68D0B = {
 			isa = PBXGroup;
 			children = (
+				B8EBDD961635D2AF00DAA698 /* CoreLocation.framework */,
 				B88255A1162CA1C500A68D0B /* MyLocation */,
 				B882559A162CA1C500A68D0B /* Frameworks */,
 				B8825598162CA1C500A68D0B /* Products */,
@@ -97,8 +101,8 @@
 				B88255AA162CA1C500A68D0B /* AppDelegate.h */,
 				B88255AB162CA1C500A68D0B /* AppDelegate.m */,
 				B88255B3162CA1C500A68D0B /* MainStoryboard.storyboard */,
-				B88255B6162CA1C500A68D0B /* FirstViewController.h */,
-				B88255B7162CA1C500A68D0B /* FirstViewController.m */,
+				B88255B6162CA1C500A68D0B /* CurentLocationViewController.h */,
+				B88255B7162CA1C500A68D0B /* CurentLocationViewController.m */,
 				B88255B9162CA1C500A68D0B /* first.png */,
 				B88255BB162CA1C500A68D0B /* first@2x.png */,
 				B88255BD162CA1C500A68D0B /* SecondViewController.h */,
@@ -196,7 +200,7 @@
 			files = (
 				B88255A8162CA1C500A68D0B /* main.m in Sources */,
 				B88255AC162CA1C500A68D0B /* AppDelegate.m in Sources */,
-				B88255B8162CA1C500A68D0B /* FirstViewController.m in Sources */,
+				B88255B8162CA1C500A68D0B /* CurentLocationViewController.m in Sources */,
 				B88255BF162CA1C500A68D0B /* SecondViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -279,6 +283,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MyLocation/MyLocation-Prefix.pch";
 				INFOPLIST_FILE = "MyLocation/MyLocation-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -290,6 +295,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MyLocation/MyLocation-Prefix.pch";
 				INFOPLIST_FILE = "MyLocation/MyLocation-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -314,6 +320,7 @@
 				B88255C8162CA1C500A68D0B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

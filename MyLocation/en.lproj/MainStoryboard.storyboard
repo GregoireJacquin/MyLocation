@@ -1,49 +1,138 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2837" systemVersion="12A269" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2843" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="4">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1921"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1929"/>
     </dependencies>
     <scenes>
-        <!--class Prefix:identifier First View Controller - First-->
+        <!--Curent Location View Controller - First-->
         <scene sceneID="11">
             <objects>
-                <viewController title="First" id="2" customClass="FirstViewController" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="10" sceneMemberID="firstResponder"/>
+                <viewController title="First" id="2" customClass="CurentLocationViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="16">
-                        <rect key="frame" x="0.0" y="20" width="320" height="499"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="First View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="20">
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="GPS coordinates" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nzv-cY-ftV">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" minimumZoomScale="0.0" maximumZoomScale="0.0" bouncesZoom="NO" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="21">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Lattitude :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XhR-bh-TIW">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="88" id="Ikv-jk-tyi"/>
+                                    <constraint firstAttribute="width" constant="75" id="MQk-Vl-C6T"/>
                                 </constraints>
-                                <string key="text">Loaded by the first view controller — an instance of FirstViewController — specified in the app delegate.</string>
-                                <fontDescription key="fontDescription" type="system" size="system"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textView>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Longitude :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Id8-xa-oFk">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="(Address goes here)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sAW-hO-TLN">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="Km6-ju-0S8"/>
+                                    <constraint firstAttribute="width" constant="286" id="mqf-21-QkA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Longitude goes here" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vUJ-Mc-bKu">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="182" id="md7-9p-aFS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Lattitude goes here" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e0w-mS-71X">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J1p-Gl-dg3">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="190" id="ZgF-Gv-XL6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Tag location">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2lM-H8-peX">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Get my location">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="getLocation:" destination="2" eventType="touchUpInside" id="oxd-mx-ssv"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="21" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="QBg-X6-fBV"/>
-                            <constraint firstAttribute="trailing" secondItem="20" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Qxj-1L-2Yh"/>
-                            <constraint firstItem="20" firstAttribute="leading" secondItem="16" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Ty9-wx-CyI"/>
-                            <constraint firstItem="21" firstAttribute="leading" secondItem="16" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Zmm-k2-2L7"/>
-                            <constraint firstItem="21" firstAttribute="top" secondItem="20" secondAttribute="bottom" constant="40" type="user" id="jX0-Wi-kmb"/>
-                            <constraint firstAttribute="centerY" secondItem="21" secondAttribute="centerY" type="user" id="yWk-L2-m9F"/>
+                            <constraint firstAttribute="trailing" secondItem="e0w-mS-71X" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="1PV-7W-8of"/>
+                            <constraint firstItem="Nzv-cY-ftV" firstAttribute="top" secondItem="16" secondAttribute="top" constant="20" symbolic="YES" type="default" id="9Mh-9c-zM5"/>
+                            <constraint firstAttribute="trailing" secondItem="vUJ-Mc-bKu" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="C0z-O3-mMY"/>
+                            <constraint firstItem="XhR-bh-TIW" firstAttribute="leading" secondItem="16" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="HTO-a3-SAw"/>
+                            <constraint firstItem="J1p-Gl-dg3" firstAttribute="centerX" secondItem="Nzv-cY-ftV" secondAttribute="centerX" type="default" id="His-ry-JOb"/>
+                            <constraint firstItem="e0w-mS-71X" firstAttribute="leading" secondItem="XhR-bh-TIW" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="LcU-El-2be"/>
+                            <constraint firstItem="sAW-hO-TLN" firstAttribute="leading" secondItem="16" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="NZP-MR-ZYy"/>
+                            <constraint firstItem="Id8-xa-oFk" firstAttribute="top" secondItem="16" secondAttribute="top" constant="109" id="Qvl-Xq-ArD"/>
+                            <constraint firstItem="Id8-xa-oFk" firstAttribute="leading" secondItem="16" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Re6-46-Wrr"/>
+                            <constraint firstItem="sAW-hO-TLN" firstAttribute="top" secondItem="16" secondAttribute="top" constant="162" id="UY8-eo-5Ep"/>
+                            <constraint firstItem="XhR-bh-TIW" firstAttribute="top" secondItem="16" secondAttribute="top" constant="73" id="YPN-KQ-Iwt"/>
+                            <constraint firstItem="Nzv-cY-ftV" firstAttribute="centerX" secondItem="16" secondAttribute="centerX" type="default" id="cVn-dI-fO6"/>
+                            <constraint firstItem="vUJ-Mc-bKu" firstAttribute="baseline" secondItem="Id8-xa-oFk" secondAttribute="baseline" type="default" id="f2f-aR-eeg"/>
+                            <constraint firstItem="2lM-H8-peX" firstAttribute="leading" secondItem="J1p-Gl-dg3" secondAttribute="leading" type="default" id="i3A-16-UlW"/>
+                            <constraint firstAttribute="bottom" secondItem="2lM-H8-peX" secondAttribute="bottom" constant="32" id="kfa-5o-Jge"/>
+                            <constraint firstAttribute="bottom" secondItem="J1p-Gl-dg3" secondAttribute="bottom" constant="107" id="nrM-Qz-SAo"/>
+                            <constraint firstItem="2lM-H8-peX" firstAttribute="trailing" secondItem="J1p-Gl-dg3" secondAttribute="trailing" type="default" id="snY-o9-JG5"/>
+                            <constraint firstItem="e0w-mS-71X" firstAttribute="baseline" secondItem="XhR-bh-TIW" secondAttribute="baseline" type="default" id="t3Y-xO-xmi"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="First" image="first" id="7"/>
+                    <navigationItem key="navigationItem" title="Current Location" id="OCb-f9-w3j"/>
+                    <connections>
+                        <outlet property="addressLabel" destination="sAW-hO-TLN" id="9mk-kV-dTa"/>
+                        <outlet property="getButton" destination="2lM-H8-peX" id="0lQ-xy-L5c"/>
+                        <outlet property="lattitudeLabel" destination="e0w-mS-71X" id="byT-iN-ibh"/>
+                        <outlet property="longitudeLabel" destination="vUJ-Mc-bKu" id="D81-Rn-AfF"/>
+                        <outlet property="messageLabel" destination="Nzv-cY-ftV" id="wDU-nc-uub"/>
+                        <outlet property="tagButton" destination="J1p-Gl-dg3" id="mSJ-2p-lp9"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="10" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="653" y="-138"/>
+            <point key="canvasLocation" x="709" y="-153"/>
         </scene>
-        <!--class Prefix:identifier Second View Controller - Second-->
+        <!--Navigation Controller - Tag-->
+        <scene sceneID="ppn-DA-9hv">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="gqe-4v-5CY" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Tag" image="first" id="qUR-WS-XdE"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gjw-wM-Qyz">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="2" kind="relationship" relationship="rootViewController" id="Ok0-h0-B9C"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e5p-Km-3GZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="219" y="-153"/>
+        </scene>
+        <!--Second View Controller - Second-->
         <scene sceneID="13">
             <objects>
                 <viewController title="Second" id="3" customClass="SecondViewController" sceneMemberID="viewController">
@@ -57,11 +146,10 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" minimumZoomScale="0.0" maximumZoomScale="0.0" bouncesZoom="NO" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="23">
+                            <textView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" minimumZoomScale="0.0" maximumZoomScale="0.0" bouncesZoom="NO" editable="NO" text="Loaded by the second view controller — an instance of SecondViewController — specified in the app delegate." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="23">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="88" id="cQR-IW-sY8"/>
                                 </constraints>
-                                <string key="text">Loaded by the second view controller — an instance of SecondViewController — specified in the app delegate.</string>
                                 <fontDescription key="fontDescription" type="system" size="system"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textView>
@@ -80,7 +168,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="12" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="653" y="498"/>
+            <point key="canvasLocation" x="219" y="512"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="15">
@@ -93,19 +181,39 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="2" kind="relationship" relationship="viewControllers" id="26"/>
+                        <segue destination="gqe-4v-5CY" kind="relationship" relationship="viewControllers" id="21i-IV-KGh"/>
                         <segue destination="3" kind="relationship" relationship="viewControllers" id="27"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="14" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="132" y="180"/>
+            <point key="canvasLocation" x="-320" y="156"/>
         </scene>
     </scenes>
     <resources>
         <image name="first" width="16" height="16"/>
         <image name="second" width="16" height="16"/>
     </resources>
+    <classes>
+        <class className="CurentLocationViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CurentLocationViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="getLocation:"/>
+                <relationship kind="outlet" name="addressLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="getButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="lattitudeLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="longitudeLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="messageLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="tagButton" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="SecondViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SecondViewController.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
