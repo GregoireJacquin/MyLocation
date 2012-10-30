@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CategoryPickerViewController.h"
 
-@interface LocationDetailsViewController : UITableViewController
+@interface LocationDetailsViewController : UITableViewController <UITextViewDelegate,CategoryPickerViewControllerDelegate>
 
 @property (nonatomic, strong) IBOutlet UITextView *descriptionTextView;
 @property (nonatomic, strong) IBOutlet UILabel *categoryLabel;

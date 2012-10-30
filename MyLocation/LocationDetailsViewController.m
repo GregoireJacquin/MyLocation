@@ -8,12 +8,14 @@
 
 #import "LocationDetailsViewController.h"
 
+
 @interface LocationDetailsViewController ()
 
 @end
 
 @implementation LocationDetailsViewController {
     NSString *descriptionText;
+    NSString *categoryName;
 }
 @synthesize descriptionTextView;
 @synthesize categoryLabel;
@@ -30,6 +32,7 @@
     if(self = [super initWithCoder:aDecoder])
     {
         descriptionText = @"";
+        categoryName = @"No Category";
     }
     return self;
 }
@@ -54,8 +57,8 @@
 }
 - (NSString *)stringFromPlacemark:(CLPlacemark *)thePlacemark
 {
-    return [NSString stringWithFormat:@"%@ %@, %@ %@, %@ %@",placemark.subThoroughfare,placemark.thoroughfare
-            ,placemark.locality,placemark.administrativeArea,placemark.postalCode,placemark.country];
+    return [NSString stringWithFormat:@"%@ %@, %@ %@, %@ %@",thePlacemark.subThoroughfare,thePlacemark.thoroughfare
+            ,thePlacemark.locality,thePlacemark.administrativeArea,thePlacemark.postalCode,thePlacemark.country];
 }
 - (NSString *)formatDate:(NSDate *)theDate
 {
@@ -97,7 +100,7 @@
     {
         return 88;
     }
-    else if (indexPath.row == 2 && indexPath.row == 2)
+    else if (indexPath.row == 2 && indexPath.section == 2)
     {
         CGRect rect = CGRectMake(100, 10, 190, 1000);
         self.addressLabel.frame = rect;
@@ -113,6 +116,31 @@
     {
         return 44;
     }
+    
+}
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if([segue.identifier isEqualToString:@"PickCategory"])
+    {
+        CategoryPickerViewController *controller = segue.destinationViewController;
+        controller.delegate = self;
+        controller.selectedCategoryName = categoryName;
+    }
+}
+#pragma mark - UITextViewDelegate
+
+- (BOOL)textView:(UITextView *)theTextView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text
+{
+    descriptionText = [theTextView.text stringByReplacingCharactersInRange:range withString:text];
+    return YES;
+}
+- (void)textViewDidEndEditing:(UITextView *)textView
+{
+    descriptionText = textView.text;
+}
+#pragma mark - CategoryPickerDelegate
+- (void)CategoryPicker:(CategoryPickerViewController *)controller didPickCategory:(NSString *)categoryName
+{
     
 }
 
