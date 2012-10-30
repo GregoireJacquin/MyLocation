@@ -7,6 +7,7 @@
 //
 
 #import "CurentLocationViewController.h"
+#import "LocationDetailsViewController.h"
 
 @interface CurentLocationViewController ()
 
@@ -194,6 +195,16 @@
 - (NSString *)stringFromPlacemark:(CLPlacemark *)thePlacemark
 {
     return [NSString stringWithFormat:@"%@ %@ \n%@ %@ %@",thePlacemark.subThoroughfare,thePlacemark.thoroughfare,thePlacemark.locality,thePlacemark.administrativeArea,thePlacemark.postalCode];
+}
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if([segue.identifier isEqualToString:@"TagLocation"])
+    {
+        UINavigationController *navigationController = segue.destinationViewController;
+        LocationDetailsViewController *controller = (LocationDetailsViewController *)navigationController.topViewController;
+        controller.placemark = placemark;
+        controller.coordinate = location.coordinate;
+    }
 }
 
 #pragma mark - CLLocationManagerDelegate
