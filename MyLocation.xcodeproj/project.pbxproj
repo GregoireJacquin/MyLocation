@@ -25,6 +25,9 @@
 		B88255BF162CA1C500A68D0B /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B88255BE162CA1C500A68D0B /* SecondViewController.m */; };
 		B88255C1162CA1C500A68D0B /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = B88255C0162CA1C500A68D0B /* second.png */; };
 		B88255C3162CA1C500A68D0B /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B88255C2162CA1C500A68D0B /* second@2x.png */; };
+		B8D839D31641D573005EBA75 /* HudView.m in Sources */ = {isa = PBXBuildFile; fileRef = B8D839D21641D573005EBA75 /* HudView.m */; };
+		B8D839D71641DC66005EBA75 /* Checkmark.png in Resources */ = {isa = PBXBuildFile; fileRef = B8D839D51641DC66005EBA75 /* Checkmark.png */; };
+		B8D839D81641DC66005EBA75 /* Checkmark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B8D839D61641DC66005EBA75 /* Checkmark@2x.png */; };
 		B8EBDD971635D2AF00DAA698 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8EBDD961635D2AF00DAA698 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +58,10 @@
 		B88255BE162CA1C500A68D0B /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		B88255C0162CA1C500A68D0B /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
 		B88255C2162CA1C500A68D0B /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
+		B8D839D11641D573005EBA75 /* HudView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HudView.h; sourceTree = "<group>"; };
+		B8D839D21641D573005EBA75 /* HudView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HudView.m; sourceTree = "<group>"; };
+		B8D839D51641DC66005EBA75 /* Checkmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Checkmark.png; sourceTree = "<group>"; };
+		B8D839D61641DC66005EBA75 /* Checkmark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Checkmark@2x.png"; sourceTree = "<group>"; };
 		B8EBDD961635D2AF00DAA698 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -76,6 +83,8 @@
 		B882558C162CA1C400A68D0B = {
 			isa = PBXGroup;
 			children = (
+				B8D839D51641DC66005EBA75 /* Checkmark.png */,
+				B8D839D61641DC66005EBA75 /* Checkmark@2x.png */,
 				B8EBDD961635D2AF00DAA698 /* CoreLocation.framework */,
 				B88255A1162CA1C500A68D0B /* MyLocation */,
 				B882559A162CA1C500A68D0B /* Frameworks */,
@@ -111,6 +120,8 @@
 				B88255B7162CA1C500A68D0B /* CurentLocationViewController.m */,
 				B82B75A5163DC61E002C42AF /* LocationDetailsViewController.h */,
 				B82B75A6163DC61E002C42AF /* LocationDetailsViewController.m */,
+				B8D839D11641D573005EBA75 /* HudView.h */,
+				B8D839D21641D573005EBA75 /* HudView.m */,
 				B8312D5016407D5700FAAF32 /* CategoryPickerViewController.h */,
 				B8312D5116407D5700FAAF32 /* CategoryPickerViewController.m */,
 				B88255B9162CA1C500A68D0B /* first.png */,
@@ -198,6 +209,8 @@
 				B88255BC162CA1C500A68D0B /* first@2x.png in Resources */,
 				B88255C1162CA1C500A68D0B /* second.png in Resources */,
 				B88255C3162CA1C500A68D0B /* second@2x.png in Resources */,
+				B8D839D71641DC66005EBA75 /* Checkmark.png in Resources */,
+				B8D839D81641DC66005EBA75 /* Checkmark@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,6 +227,7 @@
 				B88255BF162CA1C500A68D0B /* SecondViewController.m in Sources */,
 				B82B75A7163DC61E002C42AF /* LocationDetailsViewController.m in Sources */,
 				B8312D5216407D5700FAAF32 /* CategoryPickerViewController.m in Sources */,
+				B8D839D31641D573005EBA75 /* HudView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

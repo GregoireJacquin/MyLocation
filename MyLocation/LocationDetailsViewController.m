@@ -7,6 +7,7 @@
 //
 
 #import "LocationDetailsViewController.h"
+#import "HudView.H"
 
 
 @interface LocationDetailsViewController ()
@@ -54,6 +55,11 @@
         self.addressLabel.text = @"No Address found";
     }
     self.dateLabel.text = [self formatDate:[NSDate date]];
+    
+    UITapGestureRecognizer *gestureReconizer = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(hideKeyboard:)];
+    gestureReconizer.cancelsTouchesInView = NO;
+    
+    [self.view addGestureRecognizer:gestureReconizer];
 }
 - (NSString *)stringFromPlacemark:(CLPlacemark *)thePlacemark
 {
@@ -72,7 +78,11 @@
 }
 -(void)done:(id)sender
 {
-    [self closeScreen];
+    HudView *hudView = [HudView hudInView:self.navigationController.view animated:YES];
+    hudView.text = @"Tagged";
+    
+    [self performSelector:@selector(closeScreen) withObject:self afterDelay:0.8];
+    //[self closeScreen];
 }
 - (void)cancel:(id)sender
 {
@@ -82,17 +92,33 @@
 {
     [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
 }
+- (void)hideKeyboard:(UIGestureRecognizer *)gestureReconizer
+{
+    CGPoint point = [gestureReconizer locationInView:self.tableView];
+    NSIndexPath *indexPath = [self.tableView indexPathForRowAtPoint:point];
+    
+    if (indexPath != 0 && indexPath.row == 0 && indexPath.section ==0) {
+        return;
+    }
+    [self.descriptionTextView resignFirstResponder];
+}
 #pragma mark - Table view delegate
 
+- (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if(indexPath.section == 0 && indexPath.section == 1)
+    {
+        return indexPath;
+    } else {
+        return nil;
+    }
+}
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
+    if(indexPath.row == 0 && indexPath.section == 0)
+    {
+        [self.descriptionTextView becomeFirstResponder];
+    }
 }
 - (CGFloat)tableView:(UITableView *)theTableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -139,9 +165,11 @@
     descriptionText = textView.text;
 }
 #pragma mark - CategoryPickerDelegate
-- (void)CategoryPicker:(CategoryPickerViewController *)controller didPickCategory:(NSString *)categoryName
+- (void)CategoryPicker:(CategoryPickerViewController *)controller didPickCategory:(NSString *)theCategoryName
 {
-    
+    categoryName = theCategoryName;
+    self.categoryLabel.text = categoryName;
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 @end
