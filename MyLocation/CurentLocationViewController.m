@@ -38,6 +38,7 @@
 @synthesize addressLabel;
 @synthesize getButton;
 @synthesize tagButton;
+@synthesize managedObjectContext;
 
 -(id)initWithCoder:(NSCoder *)aDecoder
 {
@@ -202,6 +203,7 @@
     {
         UINavigationController *navigationController = segue.destinationViewController;
         LocationDetailsViewController *controller = (LocationDetailsViewController *)navigationController.topViewController;
+        controller.managedObjectContext = managedObjectContext;
         controller.placemark = placemark;
         controller.coordinate = location.coordinate;
     }

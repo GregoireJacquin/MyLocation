@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "CategoryPickerViewController.h"
 
+@class Location;
+
 @interface LocationDetailsViewController : UITableViewController <UITextViewDelegate,CategoryPickerViewControllerDelegate>
 
 @property (nonatomic, strong) IBOutlet UITextView *descriptionTextView;
@@ -20,6 +22,10 @@
 
 @property (nonatomic, assign) CLLocationCoordinate2D coordinate;
 @property (nonatomic, strong) CLPlacemark *placemark;
+
+@property (nonatomic, strong) NSManagedObjectContext * managedObjectContext;
+
+@property (nonatomic, strong) Location *editLocation;
 
 - (IBAction)done:(id)sender;
 - (IBAction)cancel:(id)sender;

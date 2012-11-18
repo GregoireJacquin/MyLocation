@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B818B952164AC8B9008613E2 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B818B950164AC8B9008613E2 /* DataModel.xcdatamodeld */; };
+		B818B956164AC99D008613E2 /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = B818B955164AC99D008613E2 /* Location.m */; };
+		B818B958164ACC72008613E2 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B818B957164ACC72008613E2 /* CoreData.framework */; };
 		B82B75A7163DC61E002C42AF /* LocationDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B82B75A6163DC61E002C42AF /* LocationDetailsViewController.m */; };
 		B8312D5216407D5700FAAF32 /* CategoryPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8312D5116407D5700FAAF32 /* CategoryPickerViewController.m */; };
 		B882559C162CA1C500A68D0B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B882559B162CA1C500A68D0B /* UIKit.framework */; };
@@ -22,16 +25,21 @@
 		B88255B8162CA1C500A68D0B /* CurentLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B88255B7162CA1C500A68D0B /* CurentLocationViewController.m */; };
 		B88255BA162CA1C500A68D0B /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = B88255B9162CA1C500A68D0B /* first.png */; };
 		B88255BC162CA1C500A68D0B /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B88255BB162CA1C500A68D0B /* first@2x.png */; };
-		B88255BF162CA1C500A68D0B /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B88255BE162CA1C500A68D0B /* SecondViewController.m */; };
 		B88255C1162CA1C500A68D0B /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = B88255C0162CA1C500A68D0B /* second.png */; };
 		B88255C3162CA1C500A68D0B /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B88255C2162CA1C500A68D0B /* second@2x.png */; };
 		B8D839D31641D573005EBA75 /* HudView.m in Sources */ = {isa = PBXBuildFile; fileRef = B8D839D21641D573005EBA75 /* HudView.m */; };
 		B8D839D71641DC66005EBA75 /* Checkmark.png in Resources */ = {isa = PBXBuildFile; fileRef = B8D839D51641DC66005EBA75 /* Checkmark.png */; };
 		B8D839D81641DC66005EBA75 /* Checkmark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B8D839D61641DC66005EBA75 /* Checkmark@2x.png */; };
+		B8E514FC164C1BBB003FCFDA /* LocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8E514FB164C1BBB003FCFDA /* LocationViewController.m */; };
+		B8E51502164C26C7003FCFDA /* LocationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B8E51501164C26C7003FCFDA /* LocationCell.m */; };
 		B8EBDD971635D2AF00DAA698 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8EBDD961635D2AF00DAA698 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B818B951164AC8B9008613E2 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
+		B818B954164AC99D008613E2 /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
+		B818B955164AC99D008613E2 /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
+		B818B957164ACC72008613E2 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		B82B75A5163DC61E002C42AF /* LocationDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationDetailsViewController.h; sourceTree = "<group>"; };
 		B82B75A6163DC61E002C42AF /* LocationDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationDetailsViewController.m; sourceTree = "<group>"; };
 		B8312D5016407D5700FAAF32 /* CategoryPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryPickerViewController.h; sourceTree = "<group>"; };
@@ -54,14 +62,16 @@
 		B88255B7162CA1C500A68D0B /* CurentLocationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CurentLocationViewController.m; sourceTree = "<group>"; };
 		B88255B9162CA1C500A68D0B /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
 		B88255BB162CA1C500A68D0B /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
-		B88255BD162CA1C500A68D0B /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		B88255BE162CA1C500A68D0B /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		B88255C0162CA1C500A68D0B /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
 		B88255C2162CA1C500A68D0B /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
 		B8D839D11641D573005EBA75 /* HudView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HudView.h; sourceTree = "<group>"; };
 		B8D839D21641D573005EBA75 /* HudView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HudView.m; sourceTree = "<group>"; };
 		B8D839D51641DC66005EBA75 /* Checkmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Checkmark.png; sourceTree = "<group>"; };
 		B8D839D61641DC66005EBA75 /* Checkmark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Checkmark@2x.png"; sourceTree = "<group>"; };
+		B8E514FA164C1BBB003FCFDA /* LocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationViewController.h; sourceTree = "<group>"; };
+		B8E514FB164C1BBB003FCFDA /* LocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationViewController.m; sourceTree = "<group>"; };
+		B8E51500164C26C7003FCFDA /* LocationCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationCell.h; sourceTree = "<group>"; };
+		B8E51501164C26C7003FCFDA /* LocationCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationCell.m; sourceTree = "<group>"; };
 		B8EBDD961635D2AF00DAA698 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -70,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B818B958164ACC72008613E2 /* CoreData.framework in Frameworks */,
 				B8EBDD971635D2AF00DAA698 /* CoreLocation.framework in Frameworks */,
 				B882559C162CA1C500A68D0B /* UIKit.framework in Frameworks */,
 				B882559E162CA1C500A68D0B /* Foundation.framework in Frameworks */,
@@ -85,7 +96,6 @@
 			children = (
 				B8D839D51641DC66005EBA75 /* Checkmark.png */,
 				B8D839D61641DC66005EBA75 /* Checkmark@2x.png */,
-				B8EBDD961635D2AF00DAA698 /* CoreLocation.framework */,
 				B88255A1162CA1C500A68D0B /* MyLocation */,
 				B882559A162CA1C500A68D0B /* Frameworks */,
 				B8825598162CA1C500A68D0B /* Products */,
@@ -103,6 +113,8 @@
 		B882559A162CA1C500A68D0B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B818B957164ACC72008613E2 /* CoreData.framework */,
+				B8EBDD961635D2AF00DAA698 /* CoreLocation.framework */,
 				B882559B162CA1C500A68D0B /* UIKit.framework */,
 				B882559D162CA1C500A68D0B /* Foundation.framework */,
 				B882559F162CA1C500A68D0B /* CoreGraphics.framework */,
@@ -113,6 +125,9 @@
 		B88255A1162CA1C500A68D0B /* MyLocation */ = {
 			isa = PBXGroup;
 			children = (
+				B8E514FF164C2697003FCFDA /* Images */,
+				B8E514FE164C2685003FCFDA /* DataModel */,
+				B8E514FD164C2666003FCFDA /* SousClass */,
 				B88255AA162CA1C500A68D0B /* AppDelegate.h */,
 				B88255AB162CA1C500A68D0B /* AppDelegate.m */,
 				B88255B3162CA1C500A68D0B /* MainStoryboard.storyboard */,
@@ -120,16 +135,10 @@
 				B88255B7162CA1C500A68D0B /* CurentLocationViewController.m */,
 				B82B75A5163DC61E002C42AF /* LocationDetailsViewController.h */,
 				B82B75A6163DC61E002C42AF /* LocationDetailsViewController.m */,
-				B8D839D11641D573005EBA75 /* HudView.h */,
-				B8D839D21641D573005EBA75 /* HudView.m */,
+				B8E514FA164C1BBB003FCFDA /* LocationViewController.h */,
+				B8E514FB164C1BBB003FCFDA /* LocationViewController.m */,
 				B8312D5016407D5700FAAF32 /* CategoryPickerViewController.h */,
 				B8312D5116407D5700FAAF32 /* CategoryPickerViewController.m */,
-				B88255B9162CA1C500A68D0B /* first.png */,
-				B88255BB162CA1C500A68D0B /* first@2x.png */,
-				B88255BD162CA1C500A68D0B /* SecondViewController.h */,
-				B88255BE162CA1C500A68D0B /* SecondViewController.m */,
-				B88255C0162CA1C500A68D0B /* second.png */,
-				B88255C2162CA1C500A68D0B /* second@2x.png */,
 				B88255A2162CA1C500A68D0B /* Supporting Files */,
 			);
 			path = MyLocation;
@@ -147,6 +156,38 @@
 				B88255B1162CA1C500A68D0B /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B8E514FD164C2666003FCFDA /* SousClass */ = {
+			isa = PBXGroup;
+			children = (
+				B8D839D11641D573005EBA75 /* HudView.h */,
+				B8D839D21641D573005EBA75 /* HudView.m */,
+				B8E51500164C26C7003FCFDA /* LocationCell.h */,
+				B8E51501164C26C7003FCFDA /* LocationCell.m */,
+			);
+			name = SousClass;
+			sourceTree = "<group>";
+		};
+		B8E514FE164C2685003FCFDA /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				B818B950164AC8B9008613E2 /* DataModel.xcdatamodeld */,
+				B818B954164AC99D008613E2 /* Location.h */,
+				B818B955164AC99D008613E2 /* Location.m */,
+			);
+			name = DataModel;
+			sourceTree = "<group>";
+		};
+		B8E514FF164C2697003FCFDA /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				B88255B9162CA1C500A68D0B /* first.png */,
+				B88255BB162CA1C500A68D0B /* first@2x.png */,
+				B88255C0162CA1C500A68D0B /* second.png */,
+				B88255C2162CA1C500A68D0B /* second@2x.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -224,10 +265,13 @@
 				B88255A8162CA1C500A68D0B /* main.m in Sources */,
 				B88255AC162CA1C500A68D0B /* AppDelegate.m in Sources */,
 				B88255B8162CA1C500A68D0B /* CurentLocationViewController.m in Sources */,
-				B88255BF162CA1C500A68D0B /* SecondViewController.m in Sources */,
 				B82B75A7163DC61E002C42AF /* LocationDetailsViewController.m in Sources */,
 				B8312D5216407D5700FAAF32 /* CategoryPickerViewController.m in Sources */,
 				B8D839D31641D573005EBA75 /* HudView.m in Sources */,
+				B818B952164AC8B9008613E2 /* DataModel.xcdatamodeld in Sources */,
+				B818B956164AC99D008613E2 /* Location.m in Sources */,
+				B8E514FC164C1BBB003FCFDA /* LocationViewController.m in Sources */,
+				B8E51502164C26C7003FCFDA /* LocationCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,6 +393,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		B818B950164AC8B9008613E2 /* DataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B818B951164AC8B9008613E2 /* DataModel.xcdatamodel */,
+			);
+			currentVersion = B818B951164AC8B9008613E2 /* DataModel.xcdatamodel */;
+			path = DataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = B882558E162CA1C400A68D0B /* Project object */;
 }

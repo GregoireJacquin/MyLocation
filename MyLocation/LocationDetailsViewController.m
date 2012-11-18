@@ -8,6 +8,7 @@
 
 #import "LocationDetailsViewController.h"
 #import "HudView.H"
+#import "Location.h"
 
 
 @interface LocationDetailsViewController ()
@@ -17,6 +18,7 @@
 @implementation LocationDetailsViewController {
     NSString *descriptionText;
     NSString *categoryName;
+    NSDate * date;
 }
 @synthesize descriptionTextView;
 @synthesize categoryLabel;
@@ -26,6 +28,9 @@
 @synthesize dateLabel;
 @synthesize coordinate;
 @synthesize placemark;
+@synthesize managedObjectContext;
+
+@synthesize editLocation;
 
 
 - (id)initWithCoder:(NSCoder *)aDecoder
@@ -34,6 +39,7 @@
     {
         descriptionText = @"";
         categoryName = @"No Category";
+        date = [NSDate date];
     }
     return self;
 }
@@ -41,8 +47,14 @@
 {
     [super viewDidLoad];
     
+    if (editLocation != nil) {
+        self.title = @"Edit location";
+        
+        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(done:)];
+    }
+    
     self.descriptionTextView.text = descriptionText;
-    self.categoryLabel.text = @"";
+    self.categoryLabel.text = categoryName;
     
     self.latitudeLabel.text = [NSString stringWithFormat:@"%.8f",self.coordinate.latitude];
     self.longitudeLabel.text = [NSString stringWithFormat:@"%.8f",self.coordinate.longitude];
@@ -54,7 +66,7 @@
     else {
         self.addressLabel.text = @"No Address found";
     }
-    self.dateLabel.text = [self formatDate:[NSDate date]];
+    self.dateLabel.text = [self formatDate:date];
     
     UITapGestureRecognizer *gestureReconizer = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(hideKeyboard:)];
     gestureReconizer.cancelsTouchesInView = NO;
@@ -79,7 +91,28 @@
 -(void)done:(id)sender
 {
     HudView *hudView = [HudView hudInView:self.navigationController.view animated:YES];
-    hudView.text = @"Tagged";
+    
+    
+    Location *location = nil;
+    if(editLocation != nil)
+    {
+        hudView.text = @"Update";
+        location = editLocation;
+    }
+    else {
+        hudView.text = @"Tagged";
+        location = [NSEntityDescription insertNewObjectForEntityForName:@"Location" inManagedObjectContext:managedObjectContext];
+    }
+    location.locationDescription = descriptionText;
+    location.latitude = [NSNumber numberWithDouble:self.coordinate.latitude];
+    location.longitude = [NSNumber numberWithDouble:self.coordinate.longitude]; location.date = date;
+    location.placemark = self.placemark;
+    
+    NSError *error;
+    if (![self.managedObjectContext save:&error]) {
+        NSLog(@"Error %@",error);
+        FATAL_CORE_DATA_ERROR(error);
+    }
     
     [self performSelector:@selector(closeScreen) withObject:self afterDelay:0.8];
     //[self closeScreen];
@@ -106,7 +139,7 @@
 
 - (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if(indexPath.section == 0 && indexPath.section == 1)
+    if(indexPath.section == 0 && indexPath.row == 1)
     {
         return indexPath;
     } else {
@@ -170,6 +203,23 @@
     categoryName = theCategoryName;
     self.categoryLabel.text = categoryName;
     [self.navigationController popViewControllerAnimated:YES];
+}
+
+#pragma mark - Getter & Setter
+- (void)setEditLocation:(Location *)newLocation
+{
+    if (newLocation != nil) {
+        editLocation = newLocation;
+        
+        descriptionText = editLocation.locationDescription;
+        categoryName = editLocation.category;
+        
+        self.coordinate = CLLocationCoordinate2DMake([editLocation.latitude doubleValue], [editLocation.longitude doubleValue]);
+        self.placemark = editLocation.placemark;
+        
+        date = editLocation.date;
+        
+    }
 }
 
 @end
