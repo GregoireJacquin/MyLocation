@@ -13,6 +13,7 @@ NSLog(@"*** Fatal error in %s:%d\n%@\n%@", __FILE__, __LINE__, error, [error use
 [(id)[[UIApplication sharedApplication] delegate] performSelector:@selector(fatalCoreDataError:) withObject:error];
 
 #ifdef __OBJC__
+    #import <MapKit/MapKit.h>
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
     #import "CoreLocation/CoreLocation.h"

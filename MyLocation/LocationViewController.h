@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LocationViewController : UITableViewController
+@interface LocationViewController : UITableViewController <NSFetchedResultsControllerDelegate>
 
 @property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
 

@@ -18,5 +18,9 @@
 @property (nonatomic, strong) IBOutlet UIButton *tagButton;
 @property (nonatomic, strong) IBOutlet UIButton *getButton;
 
+@property (nonatomic, strong) IBOutlet UILabel * latitudeTextLabel;
+@property (nonatomic, strong) IBOutlet UILabel * longitudeTextLabel;
+@property (nonatomic, strong) IBOutlet UIView * panelView;
+
 @property (nonatomic,strong) NSManagedObjectContext * managedObjectContext;
 @end

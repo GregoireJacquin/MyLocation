@@ -9,7 +9,7 @@
 #import "LocationCell.h"
 
 @implementation LocationCell
-@synthesize descriptionLabel,addressLabel;
+@synthesize descriptionLabel,addressLabel,imageView;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
